@@ -4,6 +4,7 @@ issueTrackerURL = "https://github.com/shedaniel/LightOverlay/issues/" #optional
 logoFile = "icon.png"
 authors = "shedaniel"
 license = "Apache-2.0"
+
 [[mods]]
 modId = "lightoverlay"
 version = "${version}"
@@ -29,7 +30,7 @@ side = "CLIENT"
 [[dependencies.lightoverlay]]
 modId = "neoforge"
 type = "required"
-versionRange = "[20.2,)"
+versionRange = "[20.6,)"
 ordering = "NONE"
 side = "BOTH"
 
