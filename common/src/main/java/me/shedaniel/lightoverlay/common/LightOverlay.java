@@ -45,7 +45,8 @@ public class LightOverlay {
         configFile = new File(Platform.getConfigFolder().toFile(), "lightoverlay.properties");
         loadConfig(configFile);
         
-        enableOverlay = createKeyBinding(new ResourceLocation("lightoverlay", "enable_overlay"), InputConstants.Type.KEYSYM, 296, "key.lightoverlay.category");
+//        enableOverlay = createKeyBinding(new ResourceLocation("lightoverlay", "enable_overlay"), InputConstants.Type.KEYSYM, 296, "key.lightoverlay.category");
+        enableOverlay = createKeyBinding(ResourceLocation.fromNamespaceAndPath("lightoverlay", "enable_overlay"), InputConstants.Type.KEYSYM, 296, "key.lightoverlay.category");
         KeyMappingRegistry.register(enableOverlay);
         
         registerDebugRenderer(renderer);

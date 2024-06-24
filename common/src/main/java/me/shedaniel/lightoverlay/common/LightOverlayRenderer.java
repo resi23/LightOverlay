@@ -161,10 +161,11 @@ public class LightOverlayRenderer implements Consumer<PoseStack> {
         float x = pos.getX() - cameraX;
         float y = pos.getY() - cameraY + blockOffset;
         float z = pos.getZ() - cameraZ;
-        builder.vertex(pose, x + .01f, y, z + .01f).color(red, green, blue, 255).endVertex();
-        builder.vertex(pose, x + .99f, y, z + .99f).color(red, green, blue, 255).endVertex();
-        builder.vertex(pose, x + .99f, y, z + .01f).color(red, green, blue, 255).endVertex();
-        builder.vertex(pose, x + .01f, y, z + .99f).color(red, green, blue, 255).endVertex();
+
+        builder.addVertex(pose, x + .01f, y, z + .01f).setColor(red, green, blue, 255);
+        builder.addVertex(pose, x + .99f, y, z + .99f).setColor(red, green, blue, 255);
+        builder.addVertex(pose, x + .99f, y, z + .01f).setColor(red, green, blue, 255);
+        builder.addVertex(pose, x + .01f, y, z + .99f).setColor(red, green, blue, 255);
     }
     
     public boolean isFrustumVisible(double minX, double minY, double minZ, double maxX, double maxY, double maxZ) {

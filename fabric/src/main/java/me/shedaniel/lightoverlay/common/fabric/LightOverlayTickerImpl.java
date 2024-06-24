@@ -13,8 +13,9 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 
 public class LightOverlayTickerImpl {
-    private static final TagKey<Biome> MUSHROOM = TagKey.create(Registries.BIOME, new ResourceLocation("c", "mushroom"));
-    
+//    private static final TagKey<Biome> MUSHROOM = TagKey.create(Registries.BIOME, new ResourceLocation("c", "mushroom"));
+    private static final TagKey<Biome> MUSHROOM = TagKey.create(Registries.BIOME,  ResourceLocation.fromNamespaceAndPath("c", "mushroom"));
+
     public static void populateEntityType(EntityType<Entity> type) {
         type.factory = (entityType, level) -> null;
         type.category = MobCategory.MONSTER;
